@@ -12,17 +12,10 @@ import pickle
 import json
 import uvicorn
 from fastapi.middleware.cors import CORSMiddleware
-import nest_asyncio
-from fastapi import FastAPI, File, UploadFile
-from pydantic import BaseModel
 import numpy as np
-import tensorflow as tf
-import librosa
 import pandas as pd
-from io import BytesIO
-
 import pickle
-from fastapi import FastAPI
+
 
 app = FastAPI()
 
