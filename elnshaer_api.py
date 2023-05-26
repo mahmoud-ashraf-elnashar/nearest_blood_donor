@@ -7,15 +7,15 @@ Original file is located at
     https://colab.research.google.com/drive/1AZT5hMLM_zBgk0mZ37sHeUbnn7pfuR_a
 """
 
-!pip install fastapi
-!pip install uvicorn
-!pip install pickle5
-!pip install pydantic
-!pip install scikit-learn
-!pip install requests
-!pip install pypi-json
-!pip install pyngrok
-!pip install nest-asyncio
+pip install fastapi
+pip install uvicorn
+pip install pickle5
+pip install pydantic
+pip install scikit-learn
+pip install requests
+pip install pypi-json
+pip install pyngrok
+pip install nest-asyncio
 
 from fastapi import FastAPI
 from pydantic import BaseModel
