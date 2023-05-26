@@ -20,10 +20,10 @@ import pickle
 app = FastAPI()
 
 # Load the KNN model from disk
-with open('/content/knn_model (2).sav', 'rb') as file:
+with open('knn_model (2).sav', 'rb') as file:
     loadded_model = pickle.load(file)
 # Load the Label Encoder from the saved file
-with open('/content/label_encoder.pkl', 'rb') as file:
+with open('label_encoder.pkl', 'rb') as file:
     loadded_encoder = pickle.load(file)
 
 from sklearn import preprocessing
