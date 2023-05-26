@@ -50,7 +50,7 @@ def predict(l1: float, l2: float,curr: int):
     result=loadded_model.predict(np.array([l1,l2]).reshape(1, -1))
     result=loadded_encoder.inverse_transform([result])[0]
     print (result)
-    df = pd.read_csv('/content/geocode.csv')
+    df = pd.read_csv('geocode.csv')
     df_copy = df.copy()
     df_copy.drop([16357, 112805, 20868, 99371, 38292, 10915, 1069, 112757, 51756, 76645, 75828, 89323, 136098, 86223, 14701, 135695, 53006], axis=0, inplace=True)
     df_copy = df_copy.dropna()
