@@ -11,7 +11,6 @@ from pydantic import BaseModel
 import pickle
 import json
 import uvicorn
-from pyngrok import ngrok
 from fastapi.middleware.cors import CORSMiddleware
 import nest_asyncio
 from fastapi import FastAPI, File, UploadFile
@@ -39,17 +38,6 @@ from sklearn import preprocessing
 # label_encoder object knows how to understand word labels.
 label_encoder = preprocessing.LabelEncoder()
 
-'''
-def predict(x1: float, x2: float):
-    # Make a prediction using the KNN model
-    result=loadded_model.predict(np.array([x1,x2]).reshape(1, -1))
-    result=loadded_encoder.inverse_transform([result])
-
-    
-    # Return the prediction as a JSON response
-    return {"prediction": str(result[0])}
-predict(11.4219983,29.01541)    
-'''
 
 
 
@@ -88,21 +76,9 @@ def predict(l1: float, l2: float,curr: int):
 
     return  the_nearst_list[curr]
 
-l1 =11.4219983
-l2 = 29.01541
-curr=1
-final_result= predict(l1,l2,curr)
-print(final_result)
-
-ngrok_tunnel = ngrok.connect(8000)
-print('Public URL:', ngrok_tunnel.public_url)
-nest_asyncio.apply()
-uvicorn.run(app, port=8000)
 
 
 
 
 
-from google.colab import drive
-drive.mount('/content/drive')
 
