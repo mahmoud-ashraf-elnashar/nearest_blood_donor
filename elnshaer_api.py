@@ -56,7 +56,7 @@ def predict(l1: float, l2: float,curr: int):
     df_copy = df_copy.dropna()
     output_knn = df_copy[df_copy['y'] == result]
     print (output_knn)
-    output_knn['diff'] = (abs(output_knn['x1'] - l1) + abs(output_knn['x2'] - l2))*60*1852 
+    output_knn['diff'] = ((abs(output_knn['x1'] - l1) + abs(output_knn['x2'] - l2))*60)*1852 
     sorted_df = output_knn.sort_values('diff')
     print (sorted_df)
     the_nearst_list=[]
